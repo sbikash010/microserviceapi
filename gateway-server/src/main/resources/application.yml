@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: GATEWAY-SEVER
+  cloud:
+    gateway:
+      routes:
+        - id: ADMIN-USER
+          uri: lb://ADMIN-USER
+          predicates:
+            - Path=/admin/v1/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${DISCOVERY_SERVICE:http://localhost:8761/eureka/}
+server:
+  port: 1115
+
+
+
+
+
+
