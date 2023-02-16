@@ -20,19 +20,15 @@ import java.util.Date;
 })
 public class AdminDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "admin_details_seq_gen")
-    @SequenceGenerator(name = "admin_details_seq_gen",sequenceName = "admin_seq",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotBlank(message = "Admin not blank")
-    @NotNull(message = "Admin Name is not null!!!")
     private String name;
-    @NotNull(message = "Admin Name  not null!!!")
     @Column(name="email")
     private String email;
-    @NotNull(message = "Address is required !!!")
     private String address;
     @Column(name = "contaact_number")
-    @Size(min = 10,max = 10)
+    @Size(max = 10)
 
     private String contactNumber;
     @JsonFormat(pattern = "yy-mm-dd")

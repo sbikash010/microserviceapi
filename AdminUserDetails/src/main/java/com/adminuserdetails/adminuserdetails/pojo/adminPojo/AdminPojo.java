@@ -30,7 +30,7 @@ public class AdminPojo {
     private MultipartFile multipartFile;
     private String fileLocation;
 
-    private String data;
+    private String date;
 
 
 }

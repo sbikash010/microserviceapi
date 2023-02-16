@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sbikash010/microserviceapi/tree/master
+          uri: https://github.com/sbikash010/microserviceapi
           clone-on-start: true
 #eureka:
 #  client:
